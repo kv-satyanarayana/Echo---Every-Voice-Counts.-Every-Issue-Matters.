@@ -1,20 +1,35 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Echo
 
-# Run and deploy your AI Studio app
+### Every Voice Counts. Every Issue Matters.
 
-This contains everything you need to run your app locally.
+Echo is an AI-powered civic operations platform built for the Google Vibe2Ship Hackathon.
 
-View your app in AI Studio: https://ai.studio/apps/fb2350b3-3f65-4b79-9804-857e1584ec09
+It empowers citizens to report community issues such as potholes, water leakages, damaged streetlights, and waste management concerns in under 30 seconds.
 
-## Run Locally
+Using Google Gemini, Echo automatically analyzes submitted images, categorizes issues, estimates severity, and generates structured reports for authorities. Instead of processing complaints on a first-come, first-served basis, Echo intelligently prioritizes issues based on community impact, helping authorities make faster and more informed decisions.
 
-**Prerequisites:**  Node.js
+Our mission is simple:
 
+> Every Voice Counts. Every Issue Matters.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Key Features
+
+- 📸 AI-powered image-based issue reporting
+- 🤖 Google Gemini multimodal analysis
+- 📍 Automatic location detection
+- 🧠 Intelligent priority-based decision engine
+- 🔄 Duplicate issue detection
+- 👥 Authority task assignment workflow
+- 📈 Real-time issue tracking
+- 📱 Mobile-first responsive experience
+- 🔐 Secure authentication with Firebase
+
+## Built With
+
+- React + Vite
+- Tailwind CSS
+- Firebase Authentication
+- Cloud Firestore
+- Firebase Storage
+- Google Gemini API
+- Material Design 3
