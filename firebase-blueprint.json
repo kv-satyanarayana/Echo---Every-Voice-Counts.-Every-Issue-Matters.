@@ -1,0 +1,74 @@
+{
+  "entities": {
+    "Report": {
+      "title": "Report",
+      "description": "Citizen-submitted community issue and its AI-enriched routing details",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "category": { "type": "string" },
+        "description": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "severity": { "type": "integer" },
+        "impactScore": { "type": "integer" },
+        "department": { "type": "string" },
+        "status": { "type": "string" },
+        "address": { "type": "string" },
+        "lat": { "type": "number" },
+        "lng": { "type": "number" },
+        "dateSubmitted": { "type": "string" },
+        "citizenName": { "type": "string" },
+        "aiSummary": { "type": "string" },
+        "recommendedAction": { "type": "string" },
+        "issueTitle": { "type": "string" },
+        "citizenSummary": { "type": "string" },
+        "authoritySummary": { "type": "string" },
+        "futureImpact": { "type": "string" },
+        "isValid": { "type": "boolean" },
+        "reasonIfInvalid": { "type": "string" },
+        "confidence": { "type": "integer" }
+      },
+      "required": ["id", "category", "description", "imageUrl", "severity", "impactScore", "department", "status", "address", "lat", "lng", "dateSubmitted", "citizenName"]
+    },
+    "Worker": {
+      "title": "Worker",
+      "description": "Municipal field worker assigned to resolve civic issues",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "role": { "type": "string" },
+        "department": { "type": "string" },
+        "avatar": { "type": "string" },
+        "distance": { "type": "string" },
+        "availability": { "type": "string", "enum": ["Available", "Busy", "On Leave"] },
+        "workload": { "type": "integer" }
+      },
+      "required": ["id", "name", "role", "department", "avatar", "distance", "availability", "workload"]
+    },
+    "Authority": {
+      "title": "Authority",
+      "description": "Municipal authority user authorized to manage and route issues",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string" },
+        "role": { "type": "string" }
+      },
+      "required": ["email", "role"]
+    }
+  },
+  "firestore": {
+    "/reports/{reportId}": {
+      "schema": "Report",
+      "description": "Collection of all community reports"
+    },
+    "/workers/{workerId}": {
+      "schema": "Worker",
+      "description": "Collection of all municipal workers"
+    },
+    "/authorities/{authorityEmail}": {
+      "schema": "Authority",
+      "description": "Collection of authorized authority email addresses"
+    }
+  }
+}

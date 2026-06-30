@@ -1,0 +1,6 @@
+{
+  "name": "Echo",
+  "description": "Every Voice Counts. Every Issue Matters. AI-powered municipal management ecosystem designed with Material Design 3 for citizens and authorities.",
+  "requestFramePermissions": ["geolocation", "camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
